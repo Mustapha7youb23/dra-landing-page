@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DRA Coin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- تأثير الطابع القديم -->
+  <div class="film-overlay"></div>
+
+  <!-- شريط متحرك -->
+  <div class="infinite-marquee">
+    <div class="marquee-track">
+      <span>🖕 $DRA 🖕 $DRA 🖕 $DRA 🖕 $DRA 🖕 $DRA 🖕 $DRA</span>
+      <span>🖕 $DRA 🖕 $DRA 🖕 $DRA 🖕 $DRA 🖕 $DRA 🖕 $DRA</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="coin-3d" id="coin">
+      <div class="coin-face front">
+        <img src="logo.png" alt="Front Logo" />
+      </div>
+      <div class="coin-face back">
+        <img src="logo.png" alt="Back Logo" />
+      </div>
+    </div>
+
+    <!-- النص الدائري -->
+    <svg viewBox="0 0 500 500" width="400" height="400" class="curved-text">
+      <defs>
+        <path id="curve" d="M250,250 m-180,0 a180,180 0 1,0 360,0 a180,180 0 1,0 -360,0" />
+      </defs>
+      <text fill="#D62828" font-size="30" font-weight="bold">
+        <textPath href="#curve" startOffset="0%">
+          WELCOME TO DECENTRALIZED RETIREMENT ACCOUNT • WELCOME TO DECENTRALIZED RETIREMENT ACCOUNT
+        </textPath>
+      </text>
+    </svg>
+
+    <a href="https://www.geckoterminal.com/solana/pools/FV8pvYRLciJU2QWqgDbBgq539bF4QHNiJLtziS94TQXZ" class="buy-button">BUY NOW</a>
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+  </header>
+
+  <!-- عنوان العقد -->
+  <div class="contract-box">
+    <p id="contract-address">8h3jsXbvBRPKGGRPhoYRHr7ca8qH3tBeaE2S93X1pump</p>
+    <button onclick="copyAddress()">Copy Address</button>
+  </div>
+
+  <!-- Tokenomics -->
+  <section class="section" data-aos="fade-up">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li>Supply: 1,000,000,000</li>
+      <li>Taxes: 0%</li>
+      <li>LP Burned</li>
+    </ul>
+  </section>
+
+  <!-- Utility -->
+  <section class="section" data-aos="fade-right">
+    <h2>Utility</h2>
+    <p>Use DRA to get rid of traditional retirement plans and move to decentralized NFTs.</p>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="section" data-aos="zoom-in">
+    <h2>Roadmap</h2>
+    <ol>
+      <li>Launch</li>
+      <li>Community Building</li>
+      <li>Coin Listings</li>
+      <li>BoopaVerse</li>
+    </ol>
+  </section>
+
+  <!-- روابط التواصل -->
+  <div class="social-icons">
+    <a href="https://x.com/DRA_coin" target="_blank">
+      <img src="twitter.png" alt="Twitter" />
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2025 DRA Coin. All rights reserved.</p>
+  </footer>
+
+  <!-- مكتبة AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="script.js"></script>
+  <div class="film-overlay"></div>
+</body>
+</html>

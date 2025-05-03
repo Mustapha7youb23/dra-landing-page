@@ -1,0 +1,306 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ddd6ce;
+  color: #006125;
+  text-align: center;
+}
+
+.hero {
+  padding: 80px 20px;
+  background: url('dra-bg.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* العملة */
+.coin-3d {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin: 100px auto 30px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.5s ease;
+  z-index: 2;
+}
+
+.coin-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+}
+
+.coin-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* النص الدائري */
+.curved-text {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* النص */
+p {
+  font-size: 20px;
+  margin: 20px 0;
+  max-width: 500px;
+}
+
+.buy-button {
+  background-color: #ffc400;
+  color: #048042;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 15px rgba(255, 174, 0, 0.384);
+  display: inline-block;
+}
+
+.buy-button:hover {
+  transform: translateY(-5px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 10px 20px rgba(0, 255, 135, 0.6);
+  background-color: #e9c44a;
+}
+
+.buy-button:active {
+  transform: translateY(2px) scale(0.98) rotateX(-5deg);
+  box-shadow: 0 4px 10px rgba(0, 255, 135, 0.3);
+}
+
+/* الأقسام */
+.section {
+  padding: 60px 30px;
+  margin: 30px auto;
+  max-width: 1000px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fff6c1, lab(85.64% 0.39 50.95));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h2 {
+  font-size: 32px;
+  color: #383300;
+  margin-bottom: 20px;
+}
+
+.section p,
+.section ul,
+.section ol {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.section ul li::before {
+  content: "•";
+  color: #ffcc00;
+  margin-right: 10px;
+}
+
+/* الفوتر */
+footer {
+  padding: 30px;
+  background-color: #dfc377;
+  color: #444;
+}
+
+/* صندوق العنوان */
+.contract-box {
+  background-color: #d6ac1fec;
+  padding: 20px;
+  margin: 30px auto;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 0 7px #20201e;
+}
+
+#contract-address {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contract-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f7bd00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contract-box button:hover {
+  background-color: #cc9c00;
+}
+
+/* الشريط المتحرك */
+.infinite-marquee {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #ffefda9f;
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-track span {
+  color: #00b3369f;
+  font-size: 24px;
+  font-weight: bold;
+  padding-right: 50px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* تكيّف الشاشات الصغيرة */
+@media (max-width: 780px) {
+  .coin-3d {
+    width: 180px;
+    height: 180px;
+  }
+
+  .curved-text {
+    width: 300px;
+    height: 300px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .buy-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section ul,
+  .section ol {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+}
+
+#coin {
+  animation: spin 6s linear infinite;
+}
+
+#coin {
+  animation: cd-spin 10s linear infinite;
+}
+
+@keyframes cd-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* تأثير الطابع السينمائي القديم */
+.film-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url('https://i.ibb.co/MR9PPf7/film-grain.gif') repeat;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+  z-index: 999;
+}
+
+body {
+  filter: contrast(0.9) brightness(0.95) saturate(0.7);
+  animation: slight-shake 5s infinite;
+}
+
+/* اهتزاز خفيف لمحاكاة الفيلم القديم */
+@keyframes slight-shake {
+  0%, 100% { transform: translate(0px, 0px); }
+  25% { transform: translate(0.5px, -0.5px); }
+  50% { transform: translate(-0.5px, 0.5px); }
+  75% { transform: translate(0.5px, 0.5px); }
+}
+
+/* تأثير تشويش الفيلم */
+.film-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url('https://imgur.com/gallery/iuiu-x856fBk') repeat;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  z-index: 9999;
+  animation: grain-shake 0.5s infinite;
+}
+
+/* اهتزاز بسيط */
+@keyframes grain-shake {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(-0.5px, 0.5px); }
+  50% { transform: translate(0.5px, -0.5px); }
+  75% { transform: translate(-0.5px, -0.5px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+  
